@@ -12,19 +12,44 @@ class OrderForm(StatesGroup):
     waiting_for_name = State()
     waiting_for_address = State()
 
+class AddToCartForm(StatesGroup):
+    waiting_for_quantity = State()
+
+class RemoveFromCartForm(StatesGroup):
+    waiting_for_remove_quantity = State()
+
 @router.callback_query(F.data.startswith("add_"))
-async def add_to_cart(callback: CallbackQuery):
-    user_id = callback.from_user.id
+async def add_to_cart(callback: CallbackQuery, state: FSMContext):
     product_id = int(callback.data.split("_")[1])
+    await state.update_data(product_id=product_id)
+    await state.set_state(AddToCartForm.waiting_for_quantity)
+    await callback.message.answer("🔢 Укажите количество товара:")
+
+@router.message(AddToCartForm.waiting_for_quantity)
+async def process_quantity(message: types.Message, state: FSMContext):
+    user_id = message.from_user.id
+    data = await state.get_data()
+    product_id = data["product_id"]
+
+    try:
+        quantity = int(message.text)
+        if quantity < 1:
+            raise ValueError()
+    except ValueError:
+        await message.answer("❗ Введите корректное положительное число.")
+        return
 
     cart, _ = await Cart.objects.aget_or_create(user_id=user_id)
     item, created = await CartItem.objects.aget_or_create(cart=cart, product_id=product_id)
 
-    if not created:
-        item.quantity += 1
-        await item.asave()
+    if created:
+        item.quantity = quantity
+    else:
+        item.quantity += quantity
 
-    await callback.answer("✅ Товар добавлен в корзину", show_alert=False)
+    await item.asave()
+    await state.clear()
+    await message.answer(f"✅ Добавлено в корзину. ")
 
 @router.message(F.text == "/cart")
 async def show_cart(target: types.Message | types.CallbackQuery):
@@ -124,6 +149,9 @@ async def remove_from_cart(callback: CallbackQuery):
         await callback.answer("❌ Товар не найден в корзине", show_alert=True)
 
     await show_cart(callback)
+
+def register(dp):
+    dp.include_router(router)
 
 def register(dp):
     dp.include_router(router)
