@@ -8,6 +8,7 @@ import asyncio
 import os
 from dotenv import load_dotenv
 from io import BytesIO
+from asgiref.sync import sync_to_async
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -22,7 +23,6 @@ class OrderAdmin(admin.ModelAdmin):
         ws = wb.active
         ws.title = "Orders"
 
-        # Заголовки
         ws.append(["ID", "Пользователь", "Имя", "Адрес", "Оплачен", "Создан"])
 
         for order in queryset:
@@ -35,7 +35,6 @@ class OrderAdmin(admin.ModelAdmin):
                 order.created_at.strftime("%Y-%m-%d %H:%M"),
             ])
 
-        # Сохраняем в память
         response = HttpResponse(
             content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         )
@@ -55,17 +54,25 @@ class BroadcastAdmin(admin.ModelAdmin):
     actions = ["send_broadcast"]
 
     def send_broadcast(self, request, queryset):
-        async def _send():
-            bot = Bot(token=BOT_TOKEN)
-            for broadcast in queryset:
-                user_ids = list(Order.objects.values_list("user_id", flat=True).distinct())
-                for uid in user_ids:
-                    try:
-                        await bot.send_message(chat_id=uid, text=broadcast.text)
-                    except Exception as e:
-                        print(f"Не удалось отправить сообщение {uid}: {e}")
+        import threading
 
-        asyncio.run(_send())
+        broadcasts = list(queryset)
+        user_ids = list(Order.objects.values_list("user_id", flat=True).distinct())
+
+        def run_async_broadcast():
+            asyncio.run(self._send_broadcast(broadcasts, user_ids))
+
+        threading.Thread(target=run_async_broadcast).start()
+
+    async def _send_broadcast(self, broadcasts, user_ids):
+        bot = Bot(token=BOT_TOKEN)
+
+        for broadcast in broadcasts:
+            for uid in user_ids:
+                try:
+                    await bot.send_message(chat_id=uid, text=broadcast.text)
+                except Exception as e:
+                    print(f"Не удалось отправить сообщение {uid}: {e}")
 
     send_broadcast.short_description = "📨 Отправить рассылку"
 
