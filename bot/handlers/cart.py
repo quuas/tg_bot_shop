@@ -3,6 +3,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from store.models import Cart, CartItem, Product, Order, OrderItem
+from asgiref.sync import sync_to_async
 
 router = Router()
 
@@ -29,7 +30,7 @@ async def show_cart(message: types.Message):
     user_id = message.from_user.id
     try:
         cart = await Cart.objects.aget(user_id=user_id)
-        items = await CartItem.objects.filter(cart=cart).aselect_related("product").aall()
+        items = await sync_to_async(list)(CartItem.objects.select_related("product").filter(cart=cart))
     except Cart.DoesNotExist:
         await message.answer("🛒 Ваша корзина пуста.")
         return
@@ -71,8 +72,7 @@ async def process_address(message: types.Message, state: FSMContext):
     user_id = message.from_user.id
 
     cart = await Cart.objects.aget(user_id=user_id)
-    items = await CartItem.objects.filter(cart=cart).aselect_related("product").aall()
-
+    items = await sync_to_async(list)(CartItem.objects.select_related("product").filter(cart=cart))
     order = await Order.objects.acreate(
         user_id=user_id,
         full_name=full_name,
