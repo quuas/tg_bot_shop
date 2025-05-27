@@ -1,0 +1,5 @@
+aiogram==3.4.1
+python-dotenv
+django>=4.2
+psycopg2-binary
+openpyxl

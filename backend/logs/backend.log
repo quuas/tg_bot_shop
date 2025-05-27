@@ -1,0 +1,472 @@
+[2025-05-27 15:50:39,895] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 15:50:45,639] INFO django.server: "GET /admin/ HTTP/1.1" 200 11927
+[2025-05-27 15:50:45,794] INFO django.server: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-05-27 15:50:45,805] INFO django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-05-27 15:50:45,813] INFO django.server: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-05-27 15:50:45,815] INFO django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-05-27 15:50:45,816] INFO django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2025-05-27 15:50:45,818] INFO django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-05-27 15:50:45,840] INFO django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-05-27 15:50:45,845] INFO django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-05-27 15:50:45,845] INFO django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-05-27 15:51:14,491] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 16479
+[2025-05-27 15:51:14,600] INFO django.server: "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[2025-05-27 15:51:14,661] INFO django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2025-05-27 15:51:14,716] INFO django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+[2025-05-27 15:51:14,719] INFO django.server: "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[2025-05-27 15:51:14,721] INFO django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[2025-05-27 15:51:14,737] INFO django.server: "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[2025-05-27 15:51:14,777] INFO django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[2025-05-27 15:51:14,784] INFO django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2025-05-27 15:51:14,825] INFO django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2025-05-27 15:51:14,855] INFO django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2025-05-27 15:51:14,904] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:14,932] INFO django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[2025-05-27 15:51:14,949] INFO django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2025-05-27 15:51:14,974] INFO django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2025-05-27 15:51:21,050] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12707
+[2025-05-27 15:51:21,266] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:23,276] INFO django.server: "GET /admin/store/cart/add/ HTTP/1.1" 200 12735
+[2025-05-27 15:51:23,488] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:27,098] INFO django.server: "GET /admin/store/cartitem/add/ HTTP/1.1" 200 16311
+[2025-05-27 15:51:27,356] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:31,060] INFO django.server: "GET /admin/store/broadcast/add/ HTTP/1.1" 200 12727
+[2025-05-27 15:51:31,303] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:34,717] INFO django.server: "GET /admin/store/subcategory/add/ HTTP/1.1" 200 14559
+[2025-05-27 15:51:34,912] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:51:39,071] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12707
+[2025-05-27 15:51:39,311] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 15:52:10,036] INFO django.server: "GET /admin/store/ HTTP/1.1" 200 10153
+[2025-05-27 15:52:13,812] INFO django.server: "GET /admin/ HTTP/1.1" 200 11927
+[2025-05-27 12:58:15,191] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:13:28,819] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:17:53,543] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:19:55,500] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:24:33,955] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:29:09,553] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:33:32,471] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:35:52,732] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:37:31,648] INFO aiogram.dispatcher: Start polling
+[2025-05-27 13:37:31,727] INFO aiogram.dispatcher: Run polling for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 13:37:35,993] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 13:39:16,927] INFO django.server: "GET /admin/ HTTP/1.1" 302 0
+[2025-05-27 13:39:16,970] INFO django.server: "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4371
+[2025-05-27 13:39:17,046] INFO django.server: "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+[2025-05-27 13:39:17,060] INFO django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+[2025-05-27 13:39:17,065] INFO django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+[2025-05-27 13:39:17,066] INFO django.server: "GET /static/admin/css/login.css HTTP/1.1" 200 951
+[2025-05-27 13:39:17,067] INFO django.server: "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+[2025-05-27 13:39:17,071] INFO django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+[2025-05-27 13:39:17,112] INFO django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2025-05-27 13:39:25,358] INFO django.server: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4645
+[2025-05-27 13:43:01,205] INFO django.server: "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4645
+[2025-05-27 13:43:07,875] INFO django.server: "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2025-05-27 13:43:07,912] INFO django.server: "GET /admin/ HTTP/1.1" 200 11926
+[2025-05-27 13:43:07,997] INFO django.server: "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2025-05-27 13:43:08,039] INFO django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2025-05-27 13:43:08,040] INFO django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2025-05-27 13:44:50,017] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12706
+[2025-05-27 13:44:50,115] INFO django.server: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-05-27 13:44:50,121] INFO django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-05-27 13:44:50,132] INFO django.server: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-05-27 13:44:50,137] INFO django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-05-27 13:44:50,140] INFO django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-05-27 13:44:50,146] INFO django.server: "GET /static/admin/css/forms.css HTTP/1.1" 200 8525
+[2025-05-27 13:44:50,151] INFO django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2025-05-27 13:44:50,159] INFO django.server: "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+[2025-05-27 13:44:50,163] INFO django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+[2025-05-27 13:44:50,167] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:44:50,173] INFO django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 200 11991
+[2025-05-27 13:44:50,175] INFO django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+[2025-05-27 13:44:50,182] INFO django.server: "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+[2025-05-27 13:44:50,183] INFO django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2025-05-27 13:44:50,188] INFO django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2025-05-27 13:44:50,201] INFO django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2025-05-27 13:44:50,206] INFO django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+[2025-05-27 13:44:50,225] INFO django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-05-27 13:44:50,236] INFO django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2025-05-27 13:45:12,965] INFO django.server: "POST /admin/store/category/add/ HTTP/1.1" 302 0
+[2025-05-27 13:45:13,020] INFO django.server: "GET /admin/store/category/ HTTP/1.1" 200 13611
+[2025-05-27 13:45:13,089] INFO django.server: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+[2025-05-27 13:45:13,133] INFO django.server: "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2025-05-27 13:45:13,140] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:13,174] INFO django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2025-05-27 13:45:13,174] INFO django.server: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2025-05-27 13:45:19,167] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12706
+[2025-05-27 13:45:19,260] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:33,523] INFO django.server: "POST /admin/store/category/add/ HTTP/1.1" 302 0
+[2025-05-27 13:45:33,557] INFO django.server: "GET /admin/store/category/ HTTP/1.1" 200 13968
+[2025-05-27 13:45:33,624] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:42,152] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12706
+[2025-05-27 13:45:42,247] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:49,025] INFO django.server: "GET /admin/store/category/add/ HTTP/1.1" 200 12706
+[2025-05-27 13:45:49,097] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:51,973] INFO django.server: "GET /admin/store/category/ HTTP/1.1" 200 13747
+[2025-05-27 13:45:52,077] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:45:53,754] INFO django.server: "GET /admin/store/category/1/change/ HTTP/1.1" 200 12944
+[2025-05-27 13:45:53,862] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:46:00,304] INFO django.server: "POST /admin/store/category/1/change/ HTTP/1.1" 302 0
+[2025-05-27 13:46:00,337] INFO django.server: "GET /admin/store/category/ HTTP/1.1" 200 13988
+[2025-05-27 13:46:00,452] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:46:10,504] INFO django.server: "GET /admin/store/subcategory/add/ HTTP/1.1" 200 14658
+[2025-05-27 13:46:10,606] INFO django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2025-05-27 13:46:10,620] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:47:38,597] INFO django.server: "POST /admin/store/subcategory/add/ HTTP/1.1" 302 0
+[2025-05-27 13:47:38,646] INFO django.server: "GET /admin/store/subcategory/add/ HTTP/1.1" 200 14976
+[2025-05-27 13:47:38,837] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:47:45,546] INFO django.server: "POST /admin/store/subcategory/add/ HTTP/1.1" 302 0
+[2025-05-27 13:47:45,579] INFO django.server: "GET /admin/store/subcategory/add/ HTTP/1.1" 200 14977
+[2025-05-27 13:47:45,657] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:47:58,377] INFO django.server: "POST /admin/store/subcategory/add/ HTTP/1.1" 302 0
+[2025-05-27 13:47:58,452] INFO django.server: "GET /admin/store/subcategory/add/ HTTP/1.1" 200 14979
+[2025-05-27 13:47:58,559] INFO django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-05-27 13:47:58,573] INFO django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-05-27 13:47:58,585] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:48:05,202] INFO django.server: "POST /admin/store/subcategory/add/ HTTP/1.1" 302 0
+[2025-05-27 13:48:05,244] INFO django.server: "GET /admin/store/subcategory/ HTTP/1.1" 200 14870
+[2025-05-27 13:48:05,378] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:48:12,323] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 16733
+[2025-05-27 13:48:12,420] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:50:21,443] INFO django.server: "GET /admin/store/subcategory/ HTTP/1.1" 200 14623
+[2025-05-27 13:50:26,647] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 16733
+[2025-05-27 13:50:26,785] INFO django.server: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,798] INFO django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,804] INFO django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,806] INFO django.server: "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,806] INFO django.server: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,808] INFO django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,816] INFO django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,816] INFO django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,821] INFO django.server: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,828] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:50:26,842] INFO django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,853] INFO django.server: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,857] INFO django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,867] INFO django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2025-05-27 13:50:26,868] INFO django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,876] INFO django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,888] INFO django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,940] INFO django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-05-27 13:50:26,940] INFO django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2025-05-27 13:50:28,745] INFO django.server: "GET /admin/store/product/ HTTP/1.1" 200 11852
+[2025-05-27 13:50:28,912] INFO django.server: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2025-05-27 13:50:28,952] INFO django.server: "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2025-05-27 13:50:28,957] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:50:30,703] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 16733
+[2025-05-27 13:50:30,786] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:51:45,464] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 16733
+[2025-05-27 13:51:45,559] INFO django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[2025-05-27 13:51:45,574] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:52:58,279] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:52:58,322] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17024
+[2025-05-27 13:52:58,457] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:52:58,489] INFO django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2025-05-27 13:54:58,902] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:54:58,944] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17024
+[2025-05-27 13:54:59,093] INFO django.server: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2025-05-27 13:54:59,107] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:54:59,112] INFO django.server: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2025-05-27 13:55:40,708] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:55:40,745] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17040
+[2025-05-27 13:55:40,849] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:56:12,715] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:56:12,750] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17030
+[2025-05-27 13:56:12,834] INFO django.server: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,869] INFO django.server: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,870] INFO django.server: "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,870] INFO django.server: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,872] INFO django.server: "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,876] INFO django.server: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,879] INFO django.server: "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,884] INFO django.server: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,885] INFO django.server: "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,894] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:56:12,909] INFO django.server: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,912] INFO django.server: "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,931] INFO django.server: "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2025-05-27 13:56:12,935] INFO django.server: "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,935] INFO django.server: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,935] INFO django.server: "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,963] INFO django.server: "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,984] INFO django.server: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2025-05-27 13:56:12,991] INFO django.server: "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2025-05-27 13:56:47,784] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:56:47,852] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17033
+[2025-05-27 13:56:47,938] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:57:25,192] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:57:25,231] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17020
+[2025-05-27 13:57:25,333] INFO django.server: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+[2025-05-27 13:57:25,347] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:57:50,464] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:57:50,507] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17016
+[2025-05-27 13:57:50,625] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:58:51,513] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:58:51,552] INFO django.server: "GET /admin/store/product/add/ HTTP/1.1" 200 17027
+[2025-05-27 13:58:51,610] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:58:51,680] INFO django.server: "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2025-05-27 13:59:19,942] INFO django.server: "POST /admin/store/product/add/ HTTP/1.1" 302 0
+[2025-05-27 13:59:19,978] INFO django.server: "GET /admin/store/product/ HTTP/1.1" 200 16432
+[2025-05-27 13:59:20,090] INFO django.server: "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2025-05-27 13:59:20,112] INFO django.server: "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+[2025-05-27 13:59:20,136] INFO django.server: "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2025-05-27 14:01:20,728] INFO aiogram.event: Update id=535527009 is handled. Duration 625 ms by bot id=7803105101
+[2025-05-27 14:01:30,414] INFO aiogram.event: Update id=535527010 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:01:49,454] INFO aiogram.event: Update id=535527011 is handled. Duration 313 ms by bot id=7803105101
+[2025-05-27 14:01:55,189] INFO aiogram.event: Update id=535527012 is handled. Duration 138 ms by bot id=7803105101
+[2025-05-27 14:02:03,538] INFO aiogram.event: Update id=535527013 is handled. Duration 111 ms by bot id=7803105101
+[2025-05-27 14:02:15,230] INFO aiogram.event: Update id=535527014 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:02:19,022] INFO aiogram.event: Update id=535527015 is handled. Duration 428 ms by bot id=7803105101
+[2025-05-27 14:02:21,847] INFO aiogram.event: Update id=535527016 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:02:26,805] INFO aiogram.event: Update id=535527017 is handled. Duration 108 ms by bot id=7803105101
+[2025-05-27 14:02:31,320] INFO aiogram.event: Update id=535527018 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:02:39,777] INFO aiogram.event: Update id=535527019 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:10:31,146] WARNING aiogram.dispatcher: Received SIGTERM signal
+[2025-05-27 14:10:31,149] INFO aiogram.dispatcher: Polling stopped for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 14:10:31,150] INFO aiogram.dispatcher: Polling stopped
+[2025-05-27 14:11:01,546] INFO aiogram.dispatcher: Start polling
+[2025-05-27 14:11:01,628] INFO aiogram.dispatcher: Run polling for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 14:11:06,229] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 14:12:37,221] INFO aiogram.event: Update id=535527020 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:12:42,579] INFO aiogram.event: Update id=535527021 is handled. Duration 679 ms by bot id=7803105101
+[2025-05-27 14:12:44,677] INFO aiogram.event: Update id=535527022 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:12:54,813] INFO aiogram.event: Update id=535527023 is handled. Duration 306 ms by bot id=7803105101
+[2025-05-27 14:13:03,805] INFO aiogram.event: Update id=535527024 is handled. Duration 298 ms by bot id=7803105101
+[2025-05-27 14:13:25,519] INFO aiogram.event: Update id=535527025 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:15:48,136] INFO aiogram.event: Update id=535527026 is not handled. Duration 2 ms by bot id=7803105101
+[2025-05-27 14:15:53,530] INFO aiogram.event: Update id=535527027 is handled. Duration 589 ms by bot id=7803105101
+[2025-05-27 14:20:01,670] WARNING aiogram.dispatcher: Received SIGTERM signal
+[2025-05-27 14:20:01,673] INFO aiogram.dispatcher: Polling stopped for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 14:20:01,674] INFO aiogram.dispatcher: Polling stopped
+[2025-05-27 14:21:24,232] INFO aiogram.dispatcher: Start polling
+[2025-05-27 14:21:24,316] INFO aiogram.dispatcher: Run polling for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 14:21:28,685] INFO django.utils.autoreload: Watching for file changes with StatReloader
+[2025-05-27 14:21:29,412] INFO aiogram.event: Update id=535527028 is handled. Duration 590 ms by bot id=7803105101
+[2025-05-27 14:21:42,765] INFO aiogram.event: Update id=535527029 is not handled. Duration 1 ms by bot id=7803105101
+[2025-05-27 14:21:42,766] ERROR aiogram.event: Cause exception while process update id=535527029 by bot id=7803105101
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/handlers/catalog.py", line 9, in show_categories
+    categories = await Category.objects.all().aquery()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+[2025-05-27 14:21:46,528] INFO aiogram.event: Update id=535527030 is handled. Duration 304 ms by bot id=7803105101
+[2025-05-27 14:22:01,364] INFO aiogram.event: Update id=535527031 is not handled. Duration 1 ms by bot id=7803105101
+[2025-05-27 14:22:01,365] ERROR aiogram.event: Cause exception while process update id=535527031 by bot id=7803105101
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/handlers/catalog.py", line 9, in show_categories
+    categories = await Category.objects.all().aquery()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+[2025-05-27 14:22:08,686] INFO aiogram.event: Update id=535527032 is not handled. Duration 1 ms by bot id=7803105101
+[2025-05-27 14:22:08,687] ERROR aiogram.event: Cause exception while process update id=535527032 by bot id=7803105101
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/handlers/catalog.py", line 9, in show_categories
+    categories = await Category.objects.all().aquery()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+[2025-05-27 14:22:24,105] INFO aiogram.event: Update id=535527033 is handled. Duration 468 ms by bot id=7803105101
+[2025-05-27 14:22:26,758] INFO aiogram.event: Update id=535527034 is not handled. Duration 1 ms by bot id=7803105101
+[2025-05-27 14:22:26,759] ERROR aiogram.event: Cause exception while process update id=535527034 by bot id=7803105101
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/app/handlers/catalog.py", line 9, in show_categories
+    categories = await Category.objects.all().aquery()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'aquery'
+[2025-05-27 14:25:21,833] WARNING aiogram.dispatcher: Received SIGTERM signal
+[2025-05-27 14:25:21,834] INFO aiogram.dispatcher: Polling stopped for bot @its_test_shop_bot id=7803105101 - 'tg_shop_project'
+[2025-05-27 14:25:21,836] INFO aiogram.dispatcher: Polling stopped
