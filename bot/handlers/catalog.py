@@ -2,11 +2,18 @@ from aiogram import Router, types, F
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, Message
 from store.models import Category, SubCategory, Product
 from asgiref.sync import sync_to_async
+from handlers.start import allowed_users
 
 router = Router()
 
 @router.message(F.text == "/catalog")
 async def show_categories(message: Message):
+    user_id = message.from_user.id
+
+    if user_id not in allowed_users:
+        await message.answer("⛔ Пожалуйста, сначала подпишитесь на канал и группу.")
+        return
+    
     categories = await sync_to_async(list)(Category.objects.all())
     if not categories:
         await message.answer("Каталог пуст.")

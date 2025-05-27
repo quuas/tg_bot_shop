@@ -24,6 +24,8 @@ def get_subscribe_keyboard() -> InlineKeyboardMarkup:
         ]
     )
 
+allowed_users = set()
+
 @router.message(CommandStart())
 async def cmd_start(message: Message, bot: Bot):
     user_id = message.from_user.id
@@ -36,7 +38,8 @@ async def cmd_start(message: Message, bot: Bot):
             reply_markup=get_subscribe_keyboard()
         )
         return
-
+    
+    allowed_users.add(user_id)
     await message.answer("✅ Добро пожаловать! Вы подписаны на все нужные ресурсы.")
 
 @router.callback_query(F.data == "retry_start")

@@ -1,4 +1,5 @@
 from aiogram import Router, types, F
+from handlers.start import allowed_users
 
 router = Router()
 
@@ -10,6 +11,12 @@ FAQ_ENTRIES = {
 
 @router.message(F.text == "/faq")
 async def show_faq(message: types.Message):
+    user_id = message.from_user.id
+
+    if user_id not in allowed_users:
+        await message.answer("⛔ Пожалуйста, сначала подпишитесь на канал и группу.")
+        return
+    
     text = "❓ <b>Часто задаваемые вопросы:</b>\n\n"
     for key in FAQ_ENTRIES:
         text += f"• {key.capitalize()}\n"

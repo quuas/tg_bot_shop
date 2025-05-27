@@ -4,6 +4,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from store.models import Cart, CartItem, Product, Order, OrderItem
 from asgiref.sync import sync_to_async
+from handlers.start import allowed_users
 
 router = Router()
 
@@ -28,6 +29,11 @@ async def add_to_cart(callback: CallbackQuery):
 @router.message(F.text == "/cart")
 async def show_cart(target: types.Message | types.CallbackQuery):
     user_id = target.from_user.id
+
+    if user_id not in allowed_users:
+        await target.answer("⛔ Пожалуйста, сначала подпишитесь на канал и группу.")
+        return
+    
     try:
         cart = await Cart.objects.aget(user_id=user_id)
         items = await sync_to_async(list)(
