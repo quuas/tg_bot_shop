@@ -5,6 +5,12 @@ from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBut
 from store.models import Cart, CartItem, Product, Order, OrderItem
 from asgiref.sync import sync_to_async
 from handlers.start import allowed_users
+from aiogram.types import LabeledPrice
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+PROVIDER_TOKEN = os.getenv("PAYMENT_PROVIDER_TOKEN")
 
 router = Router()
 
@@ -122,7 +128,14 @@ async def process_address(message: types.Message, state: FSMContext):
         paid=False
     )
 
+    total = 0
+    prices = []
+
     for item in items:
+        subtotal = item.quantity * item.product.price
+        total += subtotal
+        prices.append(LabeledPrice(label=item.product.name, amount=int(subtotal * 100)))  # копейки
+
         await OrderItem.objects.acreate(
             order=order,
             product=item.product,
@@ -132,8 +145,28 @@ async def process_address(message: types.Message, state: FSMContext):
 
     await CartItem.objects.filter(cart=cart).adelete()
 
-    await message.answer("🎉 Заказ оформлен! Мы свяжемся с вами для подтверждения.")
+    await message.bot.send_invoice(
+        chat_id=message.chat.id,
+        title="Оплата заказа",
+        description=f"ФИО: {full_name}\nАдрес: {address}",
+        payload=str(order.id),
+        provider_token=PROVIDER_TOKEN,
+        currency="RUB",
+        prices=prices,
+        start_parameter="order-payment"
+    )
+
     await state.clear()
+
+@router.pre_checkout_query()
+async def pre_checkout_query(pre_checkout_q: types.PreCheckoutQuery):
+    await pre_checkout_q.answer(ok=True)
+
+@router.message(F.content_type == "successful_payment")
+async def successful_payment(message: types.Message):
+    order_id = message.successful_payment.invoice_payload
+    await Order.objects.filter(id=order_id).aupdate(paid=True)
+    await message.answer("✅ Оплата прошла успешно! Спасибо за заказ.")
 
 @router.callback_query(F.data.startswith("remove_"))
 async def remove_from_cart(callback: CallbackQuery, state: FSMContext):
