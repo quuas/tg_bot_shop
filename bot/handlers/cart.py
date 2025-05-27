@@ -26,17 +26,19 @@ async def add_to_cart(callback: CallbackQuery):
     await callback.answer("✅ Товар добавлен в корзину", show_alert=False)
 
 @router.message(F.text == "/cart")
-async def show_cart(message: types.Message):
-    user_id = message.from_user.id
+async def show_cart(target: types.Message | types.CallbackQuery):
+    user_id = target.from_user.id
     try:
         cart = await Cart.objects.aget(user_id=user_id)
-        items = await sync_to_async(list)(CartItem.objects.select_related("product").filter(cart=cart))
+        items = await sync_to_async(list)(
+            CartItem.objects.select_related("product").filter(cart=cart)
+        )
     except Cart.DoesNotExist:
-        await message.answer("🛒 Ваша корзина пуста.")
+        await target.answer("🛒 Ваша корзина пуста.") if isinstance(target, CallbackQuery) else await target.answer("🛒 Ваша корзина пуста.")
         return
 
     if not items:
-        await message.answer("🛒 Ваша корзина пуста.")
+        await target.answer("🛒 Ваша корзина пуста.") if isinstance(target, CallbackQuery) else await target.answer("🛒 Ваша корзина пуста.")
         return
 
     text = "🛒 <b>Ваша корзина:</b>\n\n"
@@ -49,9 +51,18 @@ async def show_cart(message: types.Message):
     text += f"\n<b>Итого:</b> {total} руб."
 
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [
+            InlineKeyboardButton(text=f"❌ Удалить {item.product.name}", callback_data=f"remove_{item.product.id}")
+        ] for item in items
+    ] + [
         [InlineKeyboardButton(text="✅ Оформить заказ", callback_data="order_start")]
     ])
-    await message.answer(text, reply_markup=keyboard)
+
+    if isinstance(target, CallbackQuery):
+        await target.message.edit_text(text, reply_markup=keyboard)
+    else:
+        await target.answer(text, reply_markup=keyboard)
+
 
 @router.callback_query(F.data == "order_start")
 async def order_start(callback: CallbackQuery, state: FSMContext):
@@ -92,6 +103,21 @@ async def process_address(message: types.Message, state: FSMContext):
 
     await message.answer("🎉 Заказ оформлен! Мы свяжемся с вами для подтверждения.")
     await state.clear()
+
+@router.callback_query(F.data.startswith("remove_"))
+async def remove_from_cart(callback: CallbackQuery):
+    user_id = callback.from_user.id
+    product_id = int(callback.data.split("_")[1])
+
+    try:
+        cart = await Cart.objects.aget(user_id=user_id)
+        item = await CartItem.objects.aget(cart=cart, product_id=product_id)
+        await item.adelete()
+        await callback.answer("🗑️ Товар удалён из корзины", show_alert=False)
+    except CartItem.DoesNotExist:
+        await callback.answer("❌ Товар не найден в корзине", show_alert=True)
+
+    await show_cart(callback)
 
 def register(dp):
     dp.include_router(router)
