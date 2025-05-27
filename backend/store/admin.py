@@ -2,10 +2,12 @@ from django.contrib import admin
 from .models import Category, SubCategory, Product, Cart, CartItem, Order, OrderItem, Broadcast
 from django.http import HttpResponse
 import openpyxl
+from openpyxl import Workbook
 from aiogram import Bot
 import asyncio
 import os
 from dotenv import load_dotenv
+from io import BytesIO
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -15,13 +17,13 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = ("id", "user_id", "full_name", "created_at", "paid")
     actions = ["export_as_excel"]
 
-    def export_as_excel(self, request, queryset):
-        wb = openpyxl.Workbook()
+    def export_as_excel(modeladmin, request, queryset):
+        wb = Workbook()
         ws = wb.active
-        ws.title = "Заказы"
+        ws.title = "Orders"
 
-        headers = ["ID", "User ID", "Имя", "Адрес", "Дата", "Оплачен"]
-        ws.append(headers)
+        # Заголовки
+        ws.append(["ID", "Пользователь", "Имя", "Адрес", "Оплачен", "Создан"])
 
         for order in queryset:
             ws.append([
@@ -29,15 +31,20 @@ class OrderAdmin(admin.ModelAdmin):
                 order.user_id,
                 order.full_name,
                 order.address,
+                "Да" if order.paid else "Нет",
                 order.created_at.strftime("%Y-%m-%d %H:%M"),
-                "Да" if order.paid else "Нет"
             ])
 
+        # Сохраняем в память
         response = HttpResponse(
-            content=openpyxl.writer.excel.save_virtual_workbook(wb),
-            content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         )
         response['Content-Disposition'] = 'attachment; filename=orders.xlsx'
+
+        stream = BytesIO()
+        wb.save(stream)
+        response.write(stream.getvalue())
+
         return response
 
     export_as_excel.short_description = "📥 Экспорт в Excel"
@@ -51,7 +58,7 @@ class BroadcastAdmin(admin.ModelAdmin):
         async def _send():
             bot = Bot(token=BOT_TOKEN)
             for broadcast in queryset:
-                user_ids = list(Order.objects.values_list("6602683327", flat=True).distinct())
+                user_ids = list(Order.objects.values_list("user_id", flat=True).distinct())
                 for uid in user_ids:
                     try:
                         await bot.send_message(chat_id=uid, text=broadcast.text)
