@@ -1,26 +1,27 @@
 from aiogram import Router, types, F
 from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton, Message
 from store.models import Category, SubCategory, Product
+from asgiref.sync import sync_to_async
 
 router = Router()
 
 @router.message(F.text == "/catalog")
-async def show_categories(callback: CallbackQuery):
-    categories = await Category.objects.all().aquery()
+async def show_categories(message: Message):
+    categories = await sync_to_async(list)(Category.objects.all())
     if not categories:
-        await callback.message.answer("Каталог пуст.")
+        await message.answer("Каталог пуст.")
         return
 
     keyboard = [
         [InlineKeyboardButton(text=cat.name, callback_data=f"cat_{cat.id}")]
         for cat in categories
     ]
-    await callback.message.answer("📂 Выберите категорию:", reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
+    await message.answer("📂 Выберите категорию:", reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
 
 @router.callback_query(F.data.startswith("cat_"))
 async def show_subcategories(callback: CallbackQuery):
     cat_id = int(callback.data.split("_")[1])
-    subcategories = await SubCategory.objects.filter(category_id=cat_id).aquery()
+    subcategories = await sync_to_async(list)(SubCategory.objects.filter(category_id=cat_id))
     if not subcategories:
         await callback.message.answer("Нет подкатегорий.")
         return
@@ -34,7 +35,7 @@ async def show_subcategories(callback: CallbackQuery):
 @router.callback_query(F.data.startswith("sub_"))
 async def show_products(callback: CallbackQuery):
     sub_id = int(callback.data.split("_")[1])
-    products = await Product.objects.filter(subcategory_id=sub_id).aquery()
+    products = await sync_to_async(list)(Product.objects.filter(subcategory_id=sub_id))
     if not products:
         await callback.message.answer("Нет товаров в этой подкатегории.")
         return
