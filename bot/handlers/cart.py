@@ -136,19 +136,47 @@ async def process_address(message: types.Message, state: FSMContext):
     await state.clear()
 
 @router.callback_query(F.data.startswith("remove_"))
-async def remove_from_cart(callback: CallbackQuery):
-    user_id = callback.from_user.id
+async def remove_from_cart(callback: CallbackQuery, state: FSMContext):
     product_id = int(callback.data.split("_")[1])
+    await state.update_data(product_id=product_id)
+    await state.set_state(RemoveFromCartForm.waiting_for_remove_quantity)
+    await callback.message.answer("✂️ Укажите количество товара для удаления:")
+
+@router.message(RemoveFromCartForm.waiting_for_remove_quantity)
+async def process_remove_quantity(message: types.Message, state: FSMContext):
+    user_id = message.from_user.id
+    data = await state.get_data()
+    product_id = data["product_id"]
+
+    try:
+        remove_qty = int(message.text)
+        if remove_qty < 1:
+            raise ValueError()
+    except ValueError:
+        await message.answer("❗ Введите корректное положительное число.")
+        return
 
     try:
         cart = await Cart.objects.aget(user_id=user_id)
         item = await CartItem.objects.aget(cart=cart, product_id=product_id)
-        await item.adelete()
-        await callback.answer("🗑️ Товар удалён из корзины", show_alert=False)
-    except CartItem.DoesNotExist:
-        await callback.answer("❌ Товар не найден в корзине", show_alert=True)
 
-    await show_cart(callback)
+        if remove_qty > item.quantity:
+            await message.answer(f"❗ В корзине только {item.quantity} шт. этого товара.")
+            return
+
+        if item.quantity > remove_qty:
+            item.quantity -= remove_qty
+            await item.asave()
+            await message.answer(f"🗑️ Удалено {remove_qty} шт. товара.")
+        else:
+            await item.adelete()
+            await message.answer("🗑️ Товар полностью удалён из корзины.")
+
+    except CartItem.DoesNotExist:
+        await message.answer("❌ Товар не найден в корзине.")
+
+    await state.clear()
+    await show_cart(message)
 
 def register(dp):
     dp.include_router(router)
