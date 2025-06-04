@@ -39,22 +39,66 @@ async def show_subcategories(callback: CallbackQuery):
     ]
     await callback.message.answer("📁 Выберите подкатегорию:", reply_markup=InlineKeyboardMarkup(inline_keyboard=keyboard))
 
+async def show_product_page(message, products, page, sub_id, category_id):
+    total = len(products)
+    product = products[page]
+
+    text = (
+        f"<b>{product.name}</b>\n\n"
+        f"{product.description}\n\n"
+        f"💵 Цена: {product.price} руб.\n\n"
+        f"<i>Товар {page + 1} из {total}</i>"
+    )
+
+    buttons = []
+
+    nav_buttons = []
+    if page > 0:
+        nav_buttons.append(InlineKeyboardButton(text="⬅️", callback_data=f"page_{sub_id}_{page - 1}"))
+    if page < total - 1:
+        nav_buttons.append(InlineKeyboardButton(text="➡️", callback_data=f"page_{sub_id}_{page + 1}"))
+
+    buttons.append([InlineKeyboardButton(text="🛒 В корзину", callback_data=f"add_{product.id}")])
+    if nav_buttons:
+        buttons.append(nav_buttons)
+    buttons.append([InlineKeyboardButton(text="🔙 Назад", callback_data=f"cat_{category_id}")])
+
+    reply_markup = InlineKeyboardMarkup(inline_keyboard=buttons)
+
+    try:
+        await message.edit_media(
+            media=types.InputMediaPhoto(media=product.image_url, caption=text),
+            reply_markup=reply_markup
+        )
+    except:
+        await message.answer_photo(photo=product.image_url, caption=text, reply_markup=reply_markup)
+
 @router.callback_query(F.data.startswith("sub_"))
 async def show_products(callback: CallbackQuery):
     sub_id = int(callback.data.split("_")[1])
-    products = await sync_to_async(list)(Product.objects.filter(subcategory_id=sub_id))
+    products = await sync_to_async(list)(
+        Product.objects.select_related("subcategory").filter(subcategory_id=sub_id)
+    )
+
     if not products:
         await callback.message.answer("Нет товаров в этой подкатегории.")
         return
 
-    for product in products:
-        text = f"<b>{product.name}</b>\n\n{product.description}\n\n💵 Цена: {product.price} руб."
-        keyboard = InlineKeyboardMarkup(
-            inline_keyboard=[
-                [InlineKeyboardButton(text="🛒 В корзину", callback_data=f"add_{product.id}")]
-            ]
-        )
-        await callback.message.answer_photo(photo=product.image_url, caption=text, reply_markup=keyboard)
+    category_id = products[0].subcategory.category_id
+    await show_product_page(callback.message, products, page=0, sub_id=sub_id, category_id=category_id)
+
+@router.callback_query(F.data.startswith("page_"))
+async def paginate_products(callback: CallbackQuery):
+    _, sub_id, page = callback.data.split("_")
+    sub_id = int(sub_id)
+    page = int(page)
+
+    products = await sync_to_async(list)(
+        Product.objects.select_related("subcategory").filter(subcategory_id=sub_id)
+    )
+
+    category_id = products[0].subcategory.category_id
+    await show_product_page(callback.message, products, page, sub_id=sub_id, category_id=category_id)
 
 def register(dp):
     dp.include_router(router)
